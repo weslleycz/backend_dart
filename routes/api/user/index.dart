@@ -10,21 +10,21 @@ Future<Response> onRequest(RequestContext context) async {
   switch (context.request.method) {
     case HttpMethod.post:
       return _post(context);
-    // case HttpMethod.get:
-    //   return _get(context);
+    case HttpMethod.get:
+      return _get(context);
     default:
       return Response(body: 'Route not found', statusCode: 400);
   }
 }
 
-// Future<Response> _get(RequestContext context) async {
-//   var app = await initApp();
-//   final firebase =
-//       FirebaseDatabase(app: app, databaseURL: Configurations.databaseUrl);
-//   final db = firebase.reference();
-//   var users = await db.get();
-//   return Response(body: json.encode(users));
-// }
+Future<Response> _get(RequestContext context) async {
+  var app = await initApp();
+  final firebase =
+      FirebaseDatabase(app: app, databaseURL: Configurations.databaseUrl);
+  final db = firebase.reference();
+  var users = await db.get();
+  return Response(body: json.encode(users));
+}
 
 Future<Response> _post(RequestContext context) async {
   final request = context.request;
