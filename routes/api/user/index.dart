@@ -23,7 +23,11 @@ Future<Response> _get(RequestContext context) async {
       FirebaseDatabase(app: app, databaseURL: Configurations.databaseUrl);
   final db = firebase.reference();
   var users = await db.get();
-  return Response(body: json.encode(users));
+  if (users != null) {
+    return Response(body: json.encode(users));
+  } else {
+    return Response(body: json.encode({}));
+  }
 }
 
 Future<Response> _post(RequestContext context) async {

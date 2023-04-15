@@ -1,5 +1,4 @@
 import 'package:firebase_dart/core.dart';
-import 'package:firebase_dart/database.dart';
 
 class Configurations {
   static const databaseUrl =
@@ -24,4 +23,3 @@ Future<FirebaseApp> initApp() async {
   }
   return app;
 }
-
