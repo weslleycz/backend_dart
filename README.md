@@ -15,8 +15,7 @@
 </ul>
 
 ```bash
-npm i
-pub get
+flutter pub get
 ```
 <ul>
 <li>Para iniciar a API, execute o seguinte comando:</li>
