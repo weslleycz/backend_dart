@@ -28,10 +28,9 @@ dart_frog dev
 <p>A API atualmente possui as seguintes rotas:</p>
 
 <ul>
-<li>GET /: retorna uma mensagem de boas-vindas.</li>
-<li>GET /users: retorna uma lista de usuários.</li>
-<li>GET /users/:id: retorna as informações do usuário com o ID especificado.</li>
-<li>POST /users: cria um novo usuário com as informações enviadas no corpo da requisição.</li>
-<li>PUT /users/:id: atualiza as informações do usuário com o ID especificado, com as informações enviadas no corpo da requisição.</li>
-<li>DELETE /users/:id: exclui o usuário com o ID especificado.</li>
+<li>GET /api/users: retorna uma lista de usuários.</li>
+<li>GET /api/users/:id: retorna as informações do usuário com o ID especificado.</li>
+<li>POST /api/users: cria um novo usuário com as informações enviadas no corpo da requisição.</li>
+<li>PUT /api/users/:id: atualiza as informações do usuário com o ID especificado, com as informações enviadas no corpo da requisição.</li>
+<li>DELETE /api/users/:id: exclui o usuário com o ID especificado.</li>
 </ul>
